@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+
+      <script type="module">
+      import "three_model";
+      </script>
+
+      <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+      <%= javascript_importmap_tags %>
+      <%= javascript_include_tag "application", 'data-turbo-track': 'reload' %>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  </head>
+
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: var(--light);">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="color: var(--dark);">Hello DNA</a>
+
+      <div class="d-flex">
+        <a class="btn btn-outline-primary me-2" href="#" style="border-color: var(--dark); color: var(--dark);">Sign In</a>
+        <a class="btn btn-primary" href="#" style="background-color: var(--dark); border-color: var(--dark);">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Left Section -->
+  <div class="container d-flex align-items-center" style="height: 80vh;">
+    <div class="row">
+      <div class="col-md-6 shadow-lg p-3 mb-5 bg-white rounded">
+        <h2 style="color: var(--dark);">Level up with the largest DNA Nanotechnology community</h2>
+        <p style="color: var(--dark-grey);">Join UC Berkeley professors, researchers, and DNA Enthusiasts</p>
+        
+        <div class="col">
+          <button class="btn btn-secondary w-auto d-block mb-3 text-dark bg-white" style="border-color: var(--dark-grey);">
+            Sign In with Google <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+          </button>      
+
+          <button class="btn btn-secondary w-auto d-block mb-3 text-dark bg-white" style="border-color: var(--dark-grey);">
+            Register with Twitter <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+          </button>
+          
+        
+          <%= button_to "Sign in with Github", "/auth/github", data: { turbo: false } %>
+        
+        
+          
+        </div>
+
+      </div>
+
+      <!-- Right Section 3D Model -->
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div id="model-container" style="width: 100%; height: 400px;"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+      
+  <div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <p class="text-body-secondary">Hello-DNA © 2024</p>
+      </div>
+
+      <div class="col mb-3">
+
+      </div>
+
+      <div class="col mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+  
+</html>

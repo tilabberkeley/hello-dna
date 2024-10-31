@@ -6,11 +6,23 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- Existing stylesheet link for your app -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    
+    <!-- Add Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Existing JavaScript Importmap -->
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <%= yield %>
+
+    <!-- Initialize Bootstrap JavaScript -->
+    <script>
+      import "bootstrap"
+    </script>
   </body>
 </html>
+
