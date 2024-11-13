@@ -1,0 +1,12 @@
+canvas {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+}
+h1, p {
+    color: #fff
+}
+main {
+    position: absolute;
+    z-index: 1;
+}

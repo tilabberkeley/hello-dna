@@ -1,5 +1,9 @@
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'; 
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+console.log('THREE:', THREE);
+console.log('GLTFLoader:', GLTFLoader);
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('model-container');
@@ -31,3 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
         renderer.render(scene, camera);
     }
 });
+console.log('Container:', container);
+console.log('Renderer:', renderer.domElement);
