@@ -1,4 +1,15 @@
 <%= content_tag(:canvas, "", data: {controller: "threejs"})%>
+
+<% if current_user %>
+<h2><%= current_user.email %></h2>
+<%= image_tag(current_user.avatar_url) %>
+<%= link_to "Edit Account", edit_user_registration_path %>
+<%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete %>
+<% else %>
+<%= link_to "Login", new_user_session_path %>
+<%= link_to "Create Account", new_user_registration_path %>
+<% end %>
+
 <!-- Navbar -->
   <nav class="navbar navbar-expand-lg" style="background-color: var(--light);">
     <div class="container">
