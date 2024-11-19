@@ -28,6 +28,14 @@ Devise.setup do |config|
   config.omniauth :google_oauth2, 
                   Rails.application.credentials.dig(:GOOGLE_OAUTH_CLIENT_ID), 
                   Rails.application.credentials.dig(:GOOGLE_OAUTH_SECRET)
+
+config.omniauth :github, 
+                  Rails.application.credentials.dig(:GITHUB_KEY), 
+                  Rails.application.credentials.dig(:GITHUB_SECRET)
+
+config.omniauth :twitter, 
+                  Rails.application.credentials.dig(:X_KEY), 
+                  Rails.application.credentials.dig(:X_SECRET)
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 

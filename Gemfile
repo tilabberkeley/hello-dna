@@ -9,7 +9,7 @@ gem "omniauth"
 gem "omniauth-google-oauth2"
 gem "omniauth-rails_csrf_protection", "~> 1.0"
 gem "omniauth-github"
-
+gem "omniauth-twitter"
 gem "mutex_m"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
